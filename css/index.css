@@ -1,0 +1,723 @@
+
+/* ===== Google Font Import - Poppins ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.dark-svg-navbar.active{
+  stroke: #283130;
+}
+.dark-svg-navbar{
+  stroke: #ffff;
+}
+.dark-color.active{
+  color: #283130;
+  fill: #283130;
+}
+.dark-color{
+  color: #ffff;
+  fill: #283130;
+}
+.dark-background{
+  background-color: #283130;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.dark-background.active{
+  background-color: #ffff;
+  
+}
+body {
+          width: 100%;
+          height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            
+        }
+          .container-index {
+            width: 100%;
+            height: 100vh;
+            
+            background-color: #DEDEDE;
+            overflow: scroll;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            
+            
+        }
+        .container{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .container-muncul{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+        }
+      .menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Membagi menjadi dua kolom */
+            gap: 10px; /* Jarak antar kotak */
+            width: 300px;
+        }
+        .box-menu{
+            height: 200px;
+            
+
+            display: flex;
+            
+            position: relative;
+            font-size: 1.5rem;
+            border-radius: 8px;
+        }
+        .box-menu .icon-menu{
+          background-color: ;
+          height: 100px;
+          position: absolute;
+          width: 100px;
+          margin-left: 15px;
+        }
+        .box-menu .title-menu{
+          bottom: 0;
+          right: 0;
+          width: 90%;
+          
+          position: absolute;
+          font-size: 1.5rem;
+          padding: 0 15px 20px 0;
+          font-weight: 800;
+          text-align: right;
+        }
+        .box-menu .icon-menu img{
+          width: 100%;
+          height: 100%;
+        }
+        
+        
+        .container-jadwal-shalat{
+          height: 50px;
+          width:300px;
+          margin: 5px 0 10px 0;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          border-radius: 5px;
+        }
+        .container-jadwal-shalat .waktu-shalat{
+          display: flex;
+          flex-direction: column;
+          font-size: 0.8rem;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+        }
+        
+        /*Navbar*/
+        /* From Uiverse.io by adamgiebl */ 
+
+.navbar{
+  width: 100%;
+  padding: 20px;
+  background-color: ;
+  margin-bottom: 10px;
+  display: flex;
+  position: relative;
+  z-index: 999;
+  gap: 10px;
+  border-bottom: 1px solid black;
+  background-color: ;
+  justify-content: ;
+  align-items: center;
+}
+.navbar-nav{
+  width: 80%;
+  height: 200px;
+  position: absolute;
+  top: 100%;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-top: 1px solid black;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  z-index: -9;
+  color: black;
+  transition: 0.6s ;
+  left: -100%;
+}
+.navbar-nav.active{
+  left: 0;
+}
+.navbar-nav li{
+  font-weight: 800;
+  background-color: #d8d8d8;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+}
+.title-app{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.btn-kembali{
+  padding: 5px;
+  width: 100px;
+  height: 50px;
+  
+  margin-bottom: 10px;
+  z-index: 9999;
+  color: white;
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+color: black;
+  align-items: center;
+  
+  border-radius: 8px;
+}
+/* From Uiverse.io by JulanDeAlb */ 
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 3em;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+
+
+/* button ubah tema */
+.theme-switch {
+  position: relative;
+  display: flex;
+  margin-left: 40px;
+  justify-content: center;
+  direction: rtl;
+}
+
+#theme-checkbox {
+  display: none;
+}
+
+#theme-checkbox + label {
+  /* change the font-size below to change the size of the switch button*/
+  font-size: 2rem;
+  height: 1em;
+  width: 2.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  background-color: #cecece;
+  position: relative;
+}
+
+#theme-checkbox:checked + label {
+  background-color: #3a3a3a;
+}
+
+#theme-checkbox + label:active {
+  transform: scale(0.85);
+  transition: transform 0.2s;
+}
+
+#theme-checkbox + label div {
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: inherit;
+  position: absolute;
+  top: 0.1em;
+  left: 0.1em;
+  z-index: 10;
+  transition: 0.5s cubic-bezier(1, 0.33, 0.11, 1.34);
+  background-color: #f2f2f2;
+}
+
+#theme-checkbox:checked + label div {
+  /* left: calc(2.5em - .8em - .1em); */
+  left: 1.6em;
+  background-color: #212121;
+}
+
+#theme-checkbox + label span {
+  display: flex;
+}
+
+#theme-checkbox + label svg {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  padding: 0.15em;
+  box-sizing: border-box;
+}
+
+#theme-checkbox + label span:first-of-type {
+  color: #3a3a3a;
+}
+
+#theme-checkbox + label span:last-of-type {
+  color: #cecece;
+}
+
+
+/*
+
+input search
+*/
+  
+  /* From Uiverse.io by Li-Deheng */ 
+.search button{
+  background-color: transparent;
+  width: 35px;
+  border: none;
+  height: 35px;
+}
+.search-icon svg{
+  width: 100%;
+  height: 100%;
+  
+}
+.search{
+  max-width: 400px;
+  min-width: 300px;
+  
+  
+  height: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0 5px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search input{
+  height: 100%;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-weight: 7000;
+  padding: 0 5px;
+  background-color: transparent;
+}
+
+
+
+
+.form-hadits{
+  background-color: ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.input {
+  width: calc(100% - 29px);
+  height: 100%;
+  border: 0;
+  border-color: transparent;
+  font-size: 1rem;
+  padding-right: 0px;
+  color: var(--input-line);
+  background: var(--input-bg-color);
+  border-right: 2px solid var(--input-border-color);
+  outline: none;
+}
+
+
+
+
+
+
+
+
+  
+  
+  
+/* kumpulan ayat al-qur'an */
+ul,li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.alquran-index{
+  width: 90%;
+          height: 100%;
+  background-color: transparent;
+  
+}
+.kumpulan-ayat{
+  background-color: ;
+  
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+}
+.ayat{
+  height: 65px;
+  width: 330px;
+  
+  border-radius: 8px;
+  display: flex;
+  
+  align-items: center;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
+  position: relative;
+}
+ .icon-surah {
+  margin: 0 0 0 10px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  
+}
+.icon-surah img{
+  width: 100%;
+  height: 100%;
+}
+.icon-surah p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.keterangan-ayat{
+  padding: 0 5px;
+}
+.keterangan-ayat .nama-ayat{
+  font-size: 1rem;
+  font-weight: 700;
+}
+ .keterangan-ayat .detail-ayat{
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+}
+.ayat-arab{
+ position: absolute;
+ right: 20px;
+ font-size: 2rem;
+  float: right;
+}
+
+.hadits-index{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: ;
+  padding-bottom: 10px;
+  
+}
+
+
+.btn-cari-hadits{
+  height: 50px;
+  width: 330px;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 15px;
+  
+  margin-bottom: 15px;
+  transition: 150ms cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  
+}
+
+
+
+
+
+/* input filter hadits */
+
+.detail-hadits{
+  font-weight: 800;
+  font-family: ;
+  margin-bottom: 5px;
+}
+.hadits-arab{
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.hadits-latin{
+  font-weight: 700;
+  font-family: "Poppims", Sans-Serif;
+}
+/* From Uiverse.io by gagan-gv */ 
+/* Hide the default checkbox */
+.container-input{
+  display: flex;
+  width: 330px;
+  justify-content: space-between;
+}
+.select-parawi{
+    width: 200px;
+    
+  
+}
+.select-nomor{
+  width:120px;
+  
+}
+.select-nomor input{
+  padding: 0 5px;
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+.select-menu{
+     position: relative;
+    margin:  auto;
+}
+.select-menu .select-btn{
+    overflow: hidden;
+    display: flex;
+    height: 40px;
+    background: #fff;
+    padding: 0 5px ;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.select-btn i{
+    font-size: 25px;
+    transition: 0.3s;
+}
+.select-menu.active .select-btn i{
+    transform: rotate(-180deg);
+}
+.select-menu .options{
+    position: absolute;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    height: 200px;
+    overflow: scroll;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none;
+}
+.select-menu.active .options{
+    display: block;
+}
+.options .option{
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    background: #fff;
+}
+.options .option:hover{
+    background: #F2F2F2;
+}
+.option i{
+    font-size: 25px;
+    margin-right: 12px;
+}
+.option .option-text{
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+.container-hadits{
+  width: 330px;
+  height: auto;
+  margin: 10px auto 10px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+
+
+        .index-isi-surah{
+          width: 90%;
+          height: 100%;
+        }
+        .isiAyatDipilih {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .isiAyatDipilih .ar {
+            font-size: 24px;
+            text-align: right;
+            color: #2c3e50;
+        }
+        .isiAyatDipilih .id {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #34495e;
+        }
+        .isiAyatDipilih .tr {
+            font-size: 16px;
+            margin-top: 5px;
+            color: #7f8c8d;
+        }
+        .isiAyatDipilih .nomorAyat{
+          font-weight: 800;
+        }
+        .header-surah{
+          width: 100%;
+          padding: 5px 0;
+          display: flex;
+          background-color: #283130;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          margin: 40px 0;
+          border-radius: 8px;
+          justify-content: center;
+          align-items: center;
+          height: 30px;
+        }
+        .nama-surah, .tempat-diturunkan, .jumlah-ayat{
+          width: 100px;
+          text-align: center;
+          color: white;
+        }
+        .nama-surah p{
+          margin: 0;
+        }
+        .nama-surah{
+          background-color: #283130;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 5px 0;
+          gap: 10px;
+        }
+        .tempat-diturunkan{
+          
+        }
+        .jumlah-ayat{
+          
+        }
+ 
+
+#listAsmaulHusna{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#listAsmaulHusna li{
+  height: 65px;
+  width: 330px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
+  position: relative;
+}
+.asmaArti{
+  font-size: 0.7rem;
+}
+.keterangan-asma{
+  width: 50%;
+}
+
+.index-asmaul-husna{
+  width: 90%;
+  height: 100%;
+}
+.header-asmaul-husna{
+  width: 100%;
+  background-color: ;
+  height: 100px;
+  padding: 5px;
+  
+  box-shadow: 0 2px 10px rgba(148,148,148,0.226);
+  border-radius: 5px;
+  margin: 5px 0 10px;
+}
+.form-asmaul-husna{
+  
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 15px 0;
+  gap: 5px;
+}
+.input-nomor-asmaul-husna{
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  border:1px solid gray;
+  padding: 0 0 0 5px;
+}
+.asmaArab{
+  position: absolute;
+ right: 20px;
+ font-size: 1.2rem;
+  float: right;
+}
