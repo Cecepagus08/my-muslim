@@ -2,6 +2,7 @@ function pilihAyat(){
    let listSemuaAyat = document.querySelectorAll(".ayat");
     listSemuaAyat.forEach((ayatDipilih) => {
       ayatDipilih.addEventListener("click", () => {
+        loader.classList.add("active")
       const value = ayatDipilih.getAttribute('data-value');
       const apiRequestSurah = `https://equran.id/api/v2/surat/${value}`;
       fetch(apiRequestSurah)
@@ -22,9 +23,12 @@ function pilihAyat(){
               <div id="content"></div>
             </div>
         `;
-          document.querySelector(".btn-kembali").addEventListener("click", () => handleMenuClick(5));          
-        container.innerHTML = containerHeaderSurah;
-        data.data.ayat.forEach((ayat) => {
+          document.querySelector(".btn-kembali").addEventListener("click", () => handleMenuClick(5));      
+        setTimeout((e) =>{
+            loader.classList.remove("active")
+            
+              container.innerHTML = containerHeaderSurah;
+             data.data.ayat.forEach((ayat) => {
           let isiSurahYangDipilih = document.getElementById("content");
           const isiAyat = `
             <div class="isiAyatDipilih">
@@ -36,6 +40,8 @@ function pilihAyat(){
           `;
           isiSurahYangDipilih.innerHTML += isiAyat;
         });
+          },500);
+        
       });
       console.log(value);
       });

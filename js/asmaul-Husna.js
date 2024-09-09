@@ -1,4 +1,5 @@
   function tampilAsmaulHusna() {
+    loader.classList.add("active")
     const headerAsmaulHusna = `
         <div class="index-asmaul-husna">
             <div class="btn-kembali">kembali</div>
@@ -40,7 +41,13 @@
             <p class="asmaArab">${asma.arab}</p>
           </li>
         `;
-        listAsmaulHusna.innerHTML += asmaAlHusna;
+        
+        setTimeout((e) =>{
+            loader.classList.remove("active")
+            
+              listAsmaulHusna.innerHTML += asmaAlHusna;
+          },500);
+        
       });
 
       // Pindahkan event listener di sini, setelah input field ada di DOM

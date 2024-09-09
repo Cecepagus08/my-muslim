@@ -1,5 +1,5 @@
 const container = document.querySelector('.container');
-
+const loader = document.querySelector(".loader");
 function menuUtama() {
     const apiWaktuSholat = "https://api.aladhan.com/v1/timingsByCity?city=palangkaraya&country=indonesia&method=8";
 
@@ -109,6 +109,12 @@ function handleMenuClick(index) {
         menuUtama();
     }
 }
+const navbarToggle = document.getElementById("nav-toggle"); 
+let navbarNav = document.querySelector(".navbar-nav"); 
+
+navbarToggle.addEventListener("change", () => { 
+  navbarNav.classList.toggle("active");
+});
 
 
 

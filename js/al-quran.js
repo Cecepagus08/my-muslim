@@ -1,9 +1,11 @@
 //let container = document.querySelector(".container")
 
 function tampilAlQuran(){
+  loader.classList.add("active")
   
   
-  const headerQuran = `          <div class="alquran-index">
+  const headerQuran = `
+  <div class="alquran-index">
             <div class="btn-kembali">kembali</div>
             <div class=" dark-background search">
               <input id="namaSurah" class="dark-color"type="text">
@@ -16,7 +18,10 @@ function tampilAlQuran(){
                             </button>
             </div>
 
-            <ul class="kumpulan-ayat"></ul>
+            <ul class="kumpulan-ayat">
+
+
+            </ul>
         </div>`;
     container.innerHTML = headerQuran;
 
@@ -45,8 +50,16 @@ function tampilAlQuran(){
                         <p class="ayat-arab">${ayat.asma}</p>
                     </li>`;
             });
-            listAyat.innerHTML = html;
+          setTimeout((e) =>{
+            loader.classList.remove("active")
+            
+              listAyat.innerHTML = html;
             pilihAyat();
+          },500);
+
+ 
+
+ 
 
 
         })
