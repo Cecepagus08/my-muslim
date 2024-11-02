@@ -7,6 +7,7 @@ function tampilAlQuran(){
   const headerQuran = `
   <div class="alquran-index">
             <div class="btn-kembali">kembali</div>
+            <p id="nama-fitur">Surah-Surah al-quran</p>
             <div class=" dark-background search">
               <input id="namaSurah" class="dark-color"type="text">
                 <button onclick="cariAyat()" class="btn-icon-content">

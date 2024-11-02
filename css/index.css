@@ -1,6 +1,8 @@
 
 /* ===== Google Font Import - Poppins ===== */
 
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
 
@@ -8,6 +10,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+#nama-fitur{
+  margin: 20px 0 0;
+  font-size: 1.5rem;
+  font-family: "Kalam", cursive;
+  font-weight: 800;
 }
 .dark-svg-navbar.active{
   stroke: #283130;
@@ -234,7 +242,7 @@ color: black;
 
 
 
-/* button ubah tema */
+/* button ubah tema 
 .theme-switch {
   position: relative;
   display: flex;
@@ -248,7 +256,7 @@ color: black;
 }
 
 #theme-checkbox + label {
-  /* change the font-size below to change the size of the switch button*/
+  
   font-size: 2rem;
   height: 1em;
   width: 2.5em;
@@ -282,7 +290,7 @@ color: black;
 }
 
 #theme-checkbox:checked + label div {
-  /* left: calc(2.5em - .8em - .1em); */
+
   left: 1.6em;
   background-color: #212121;
 }
@@ -306,12 +314,45 @@ color: black;
 #theme-checkbox + label span:last-of-type {
   color: #cecece;
 }
-
+*/
 
 /*
 
 input search
 */
+
+/* From Uiverse.io by Uncannypotato69 */ 
+.textWrapper {
+  height: fit-content;
+  min-width: 3rem;
+  width: fit-content;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.25ch;
+  position: relative;
+  z-index: 0;
+  color: red;
+  display: none;
+}
+
+.invertbox {
+  position: absolute;
+  height: 100%;
+  aspect-ratio: 1/1;
+  left: 0;
+  top: 0;
+  border-radius: 20%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: invert(100%);
+  animation: move 2s ease-in-out infinite;
+}
+
+@keyframes move {
+  50% {
+    left: calc(100% - 3rem);
+  }
+}
+
   
   /* From Uiverse.io by Li-Deheng */ 
 .search button{
@@ -352,6 +393,7 @@ input search
 
 
 .form-hadits{
+  height: auto;
   background-color: ;
   display: flex;
   flex-direction: column;
@@ -463,8 +505,12 @@ ul,li {
   padding-bottom: 10px;
   
 }
-
-
+#nomor-hadits{
+  font-size: 15px;
+}
+.container-jawaban{
+  height: 100%;
+}
 .btn-cari-hadits{
   height: 50px;
   width: 330px;
@@ -486,27 +532,34 @@ ul,li {
 
 .detail-hadits{
   font-weight: 800;
-  font-family: ;
+  font-family: "Poppins", Sans-Serif;
+  margin-left: 10px;
   margin-bottom: 5px;
 }
 .hadits-arab{
   text-align: right;
   font-weight: 700;
-  font-size: 1.3rem;
+  margin-top: 20px;
+  font-size: 1rem;
 }
 .hadits-latin{
-  font-weight: 700;
-  font-family: "Poppims", Sans-Serif;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  
+  font-family: "Poppins", Sans-Serif;
 }
 /* From Uiverse.io by gagan-gv */ 
 /* Hide the default checkbox */
 .container-input{
   display: flex;
+  height: ;
   width: 330px;
   justify-content: space-between;
 }
 .select-parawi{
     width: 200px;
+    
     
   
 }
@@ -533,9 +586,11 @@ ul,li {
     height: 40px;
     background: #fff;
     padding: 0 5px ;
-    font-size: 18px;
+    font-family: "Poppins", Sans-Serif;
+    font-size: 16px;
     font-weight: 700;
-    border-radius: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
     align-items: center;
     cursor: pointer;
     justify-content: space-between;
@@ -589,7 +644,7 @@ ul,li {
   margin: 10px auto 10px;
   padding: 5px;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 
@@ -692,7 +747,7 @@ ul,li {
 .header-asmaul-husna{
   width: 100%;
   background-color: ;
-  height: 100px;
+  height: auto;
   padding: 5px;
   
   box-shadow: 0 2px 10px rgba(148,148,148,0.226);

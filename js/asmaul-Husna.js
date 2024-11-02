@@ -4,7 +4,7 @@
         <div class="index-asmaul-husna">
             <div class="btn-kembali">kembali</div>
           <div class="dark-background dark-color header-asmaul-husna">
-            <h2>Asmaul Husna</h2>
+          <p id="nama-fitur">Asmul - Husna</p>
             <p>nama-nama yang baik bagi Allah Swt</p>
             <div class="form-asmaul-husna">
               <input type="number" class="input-nomor-asmaul-husna" placeholder="Masukkan nomor">

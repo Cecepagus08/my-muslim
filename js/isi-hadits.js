@@ -2,8 +2,7 @@ function menuHaditsTampil() {
   container.innerHTML = `
     <div class="hadits-index">
       <div class="btn-kembali">kembali</div>
-
-      <!-- Hapus action pada form untuk mencegah refresh -->
+      <p id="nama-fitur">Hadits al-quran</p>
       <div class="form-hadits">
         <div class="container-input">
           <div class="select-menu select-parawi">
@@ -12,12 +11,18 @@ function menuHaditsTampil() {
               <i class="bx bx-chevron-down"></i>
             </div>
             <ul id="pilihan-hadits" class="options">
+
+              <div class="textWrapper">
+                <p class="text">Loading...</p>
+                <div class="invertbox"></div>
+              </div>
+
             </ul>
           </div>
 
           <div class="select-menu select-nomor">
             <div class="select-btn">
-              <input type="number" id="nomor-hadits" placeholder="Masukkan nomor hadits">
+              <input type="number" id="nomor-hadits" placeholder="nomor hadits">
             </div>
           </div>
         </div>
@@ -68,9 +73,7 @@ function menuHaditsTampil() {
       alert("Harap pilih Parawi dan masukkan nomor hadits!");
     }
   }
-
   const apiHadits = "https://api.hadith.gading.dev/books";
-
   fetch(apiHadits)
     .then((response) => response.json())
     .then((data) => {
@@ -101,7 +104,14 @@ function menuHaditsTampil() {
   const optionMenu = document.querySelector(".select-menu");
   const selectBtn = document.querySelector(".select-btn");
 
-  selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"));
+
+
+
+
+  selectBtn.addEventListener("click", () => {
+     optionMenu.classList.toggle("active")
+    loaderOn();
+  });
 
   // Event listener untuk tombol "Cari hadits"
   document.querySelector(".btn-cari-hadits").addEventListener("click", cariHadits);
